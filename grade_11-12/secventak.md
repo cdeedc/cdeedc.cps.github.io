@@ -1,3 +1,8 @@
+---
+layout: default
+title: SecventaK
+parent: Grades 11-12
+---
 ## `SecventaK` (#1447)
 Se consideră un şir format din $n$ numere naturale şi un număr natural dat $k$. Să se determine numărul secvenţelor din şir care au proprietatea că suma elementelor secvenţei este de cel puţin de $k$ ori mai mare sau egală decât numărul elementelor secvenţei.
 
