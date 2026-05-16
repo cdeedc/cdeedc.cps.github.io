@@ -1,7 +1,7 @@
 # cdeedc_cps.github.io
 This website includes solutions (explanation and code) of competitive programming problems (`cps` stands for Competitive Programming Solutions).
 
-`SecventaK` (#1447). Se consideră un şir format din $`n`$ numere naturale şi un număr natural dat $k$. Să se determine numărul secvenţelor din şir care au proprietatea că suma elementelor secvenţei este de cel puţin de $k$ ori mai mare sau egală decât numărul elementelor secvenţei.
+`SecventaK` (#1447). Se consideră un şir format din $n$ numere naturale şi un număr natural dat $k$. Să se determine numărul secvenţelor din şir care au proprietatea că suma elementelor secvenţei este de cel puţin de $k$ ori mai mare sau egală decât numărul elementelor secvenţei.
 
 *Soluție:* Fie $a = (a_1, a_2, \ldots, a_n)$ șirul dat. Vom număra toate secvențele $a_i, \ldots, a_j$ cu proprietatea 
 
@@ -107,4 +107,10 @@ int main()
     return 0;
 }
 
+```
+
+**The Cauchy-Schwarz Inequality**
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 ```
