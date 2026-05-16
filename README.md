@@ -9,10 +9,11 @@
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
+
 # cdeedc_cps.github.io
 This website includes solutions (explanation and code) of competitive programming problems (`cps` stands for Competitive Programming Solutions).
 
-# `SecventaK` (#1447)
+## `SecventaK` (#1447)
 Se consideră un şir format din $n$ numere naturale şi un număr natural dat $k$. Să se determine numărul secvenţelor din şir care au proprietatea că suma elementelor secvenţei este de cel puţin de $k$ ori mai mare sau egală decât numărul elementelor secvenţei.
 
 *Soluție:* Fie $a = (a_1, a_2, \ldots, a_n)$ șirul dat. Vom număra toate secvențele $a_i, \ldots, a_j$ cu proprietatea 
@@ -120,7 +121,3 @@ int main()
 }
 
 ```
-
- {% raw %}
-  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
- {% endraw %}
