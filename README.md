@@ -1,15 +1,3 @@
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    }
-  };
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
 # cdeedc_cps.github.io
 This website includes solutions (explanation and code) of competitive programming problems (`cps` stands for Competitive Programming Solutions).
 
