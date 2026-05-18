@@ -1,3 +1,8 @@
+---
+title: Shift
+parent: Grade 10
+nav_order: 2
+---
 ```cpp
 /**
 #include <iostream>
