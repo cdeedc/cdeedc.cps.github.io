@@ -9,21 +9,21 @@ tags: [Range Minimum Query]
 
 Se dau doi vectori $a$ și $b$ cu $n$ elemente fiecare. Să se determine numărul de secvențe $[l, r]$ cu $1 \leqslant l \leqslant r \leqslant n$ care au proprietatea:
 
-$$ \max_{l \leqslant i \leqslant r} a_i = \min_{l \leqslant i \leqslant r} b_i $$
+$$ \max\limits_{l \leqslant i \leqslant r} a_i = \min\limits_{l \leqslant i \leqslant r} b_i. $$
 
-Pentru a calcula eficient $\max_{l \leqslant i \leqslant r} a_i$ și $\min_{l \leqslant i \leqslant r} b_i$, vom folosi metoda programării dinamice, și anume *Range Minimum Query*. Cu o precalculare în timp $\mathcal{O}(n \log n)$, vom reuși să răspundem la interogări precum valoarea minimă pe un interval din vector în timp constant: $\mathcal{O}(1)$.
+Pentru a calcula eficient $\max\limits_{l \leqslant i \leqslant r} a_i$ și $\min\limits_{l \leqslant i \leqslant r} b_i$, vom folosi metoda programării dinamice, și anume *Range Minimum Query*. Cu o precalculare în timp $\mathcal{O}(n \log n)$, vom reuși să răspundem la interogări precum valoarea minimă pe un interval din vector în timp constant: $\mathcal{O}(1)$.
 
 Fie atunci:
-* $\text{maxRmq}(p, i) = \max_{i \leqslant j < i + 2^p} a_j$ - valoarea maximă din vectorul $a$ între pozițiile $[i, i + 2^p - 1]$
-* $\text{minRmq}(p, i) = \min_{i \leqslant j < i + 2^p} b_j$ - valoarea minimă din vectorul $b$ între pozițiile $[i, i + 2^p - 1]$
+* $\text{maxRmq}(p, i) = \max\limits_{i \leqslant j < i + 2^p} a_j$ - valoarea maximă din vectorul $a$ între pozițiile $[i, i + 2^p - 1]$
+* $\text{minRmq}(p, i) = \min\limits_{i \leqslant j < i + 2^p} b_j$ - valoarea minimă din vectorul $b$ între pozițiile $[i, i + 2^p - 1]$
 
-Pentru fiecare $1 \leqslant l \leqslant n$, vom număra câte valori $l \leqslant r \leqslant n$ există astfel încât să avem $\max_{l \leqslant i \leqslant r} a_i = \min_{l \leqslant i \leqslant r} b_i$ în $\mathcal{O}(\log n)$ cu ajutorul celor două tablouri bidimensionale menționate anterior.
+Pentru fiecare $1 \leqslant l \leqslant n$, vom număra câte valori $l \leqslant r \leqslant n$ există astfel încât să avem $\max\limits_{l \leqslant i \leqslant r} a_i = \min\limits_{l \leqslant i \leqslant r} b_i$ în $\mathcal{O}(\log n)$ cu ajutorul celor două tablouri bidimensionale menționate anterior.
 
 Fie deci $l \in \{1, 2, \ldots, n\}$ fixat.
 
 Definim funcțiile $f, g : \{l, l + 1, \ldots, n\} \to \mathbb{R}$ prin
-* $f(r) = \max_{l \leqslant i \leqslant r} a_i$ ,
-* $g(r) = \min_{l \leqslant i \leqslant r} b_i$ ,
+* $f(r) = \max\limits_{l \leqslant i \leqslant r} a_i$ ,
+* $g(r) = \min\limits_{l \leqslant i \leqslant r} b_i$ ,
 
 unde $r \geqslant l$ reprezintă capătul dreapta al unei secvențe.
 
