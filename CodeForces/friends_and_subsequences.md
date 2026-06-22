@@ -29,10 +29,27 @@ unde $r \geqslant l$ reprezintă capătul dreapta al unei secvențe.
 
 > *Observație.* Funcția $f$ este crescătoare, în timp ce $g$ este descrescătoare.
 
-*Demonstrație.* 
+*Demonstrație.* Într-adevăr, pentru orice $l \leqslant r < n$, avem:
 
-{: .warning}
-Paragraph
+$$
+\begin{align*}
+f(r + 1) &= \max_{l \leqslant i \leqslant r + 1} a_i \\
+         &= \max(\max_{l \leqslant i \leqslant r} a_i, a_{r + 1}) \\
+         &= \max(f(r), a_{r + 1}) \\
+         &\geqslant f(r),
+\end{align*}
+$$
+
+i.e. $f$ este crescătoare. În mod analog se arată că $g$ este descrescătoare.
+
+Trebuie să numărăm câte valori $r$ au proprietatea că $f(r) = g(r) \iff f(r) - g(r) = 0$.
+
+Fie $h : \{l, l + 1, \ldots, n\} \to \mathbb{R}$, dată de $h = f - g$. Deoarece $g$ este descrescătoare, funcția $-g$ e crescătoare, ceea ce înseamnă că $h$ este crescătoare. Relația de mai sus revine la $h(r) = 0$. Astfel, dacă luăm
+* $r_1 = \min \{r | h(r) = 0\}$,
+* $r_2 = \max \{r | h(r) = 0\}$,
+
+numărul de perechi cu capătul stânga $l$ este egal cu $r_2 - r_1 + 1$.
+În consecință, numărul căutat este egal cu $\sum\limits_{l = 1}^{n} (r_2(l) - r_1(l) + 1)$.
 
 ```cpp
 #include <iostream>
