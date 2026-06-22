@@ -8,6 +8,9 @@
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
+{% if page.tags and page.tags.size > 0 %}
+<div id="jekyll-tags-data" data-tags="{{ page.tags | join: ',' }}" style="display: none;"></div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const titleElement = document.querySelector("#main-content h1") || document.querySelector("main h1") || document.querySelector("h1");
