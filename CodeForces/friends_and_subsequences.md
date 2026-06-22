@@ -8,6 +8,7 @@ tags: [Range Minimum Query]
 ## [B. Friends and Subsequences](https://codeforces.com/edu/course/3/lesson/18/2/practice/contest/619577/problem/B)
 
 Se dau doi vectori $a$ și $b$ cu $n$ elemente fiecare. Să se determine numărul de secvențe $[l, r]$ cu $1 \leqslant l \leqslant r \leqslant n$ care au proprietatea:
+
 $$ \max_{l \leqslant i \leqslant r} a_i = \min_{l \leqslant i \leqslant r} b_i $$
 
 Pentru a calcula eficient $\max_{l \leqslant i \leqslant r} a_i$ și $\min_{l \leqslant i \leqslant r} b_i$, vom folosi metoda programării dinamice, și anume *Range Minimum Query*. Cu o precalculare în timp $\mathcal{O}(n \log n)$, vom reuși să răspundem la interogări precum valoarea minimă pe un interval din vector în timp constant: $\mathcal{O}(1)$.
