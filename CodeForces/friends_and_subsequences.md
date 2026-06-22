@@ -19,9 +19,9 @@ Fie atunci:
 
 Pentru fiecare $1 \leqslant l \leqslant n$, vom număra câte valori $l \leqslant r \leqslant n$ există astfel încât să avem $\max\limits_{l \leqslant i \leqslant r} a_i = \min\limits_{l \leqslant i \leqslant r} b_i$ în $\mathcal{O}(\log n)$ cu ajutorul celor două tablouri bidimensionale menționate anterior.
 
-Considerăm $l \in {1, 2, \ldots, n}$ arbitrar fixat.
+Considerăm $l \in \lbrace 1, 2, \ldots, n \rbrace$ arbitrar fixat.
 
-Definim funcțiile $f, g : {l, l + 1, \ldots, n} \to \mathbb{R}$ prin
+Definim funcțiile $f, g : \lbrace l, l + 1, \ldots, n \rbrace \to \mathbb{R}$ prin
 * $f(r) = \max\limits_{l \leqslant i \leqslant r} a_i$ ,
 * $g(r) = \min\limits_{l \leqslant i \leqslant r} b_i$ ,
 
@@ -44,9 +44,9 @@ i.e. $f$ este crescătoare. În mod analog se arată că $g$ este descrescătoar
 
 Trebuie să numărăm câte valori $r$ au proprietatea că $f(r) = g(r) \iff f(r) - g(r) = 0$.
 
-Fie $h : {l, l + 1, \ldots, n} \to \mathbb{R}$, dată de $h = f - g$. Deoarece $g$ este descrescătoare, funcția $-g$ e crescătoare, ceea ce înseamnă că $h$ este crescătoare. Relația de mai sus revine la $h(r) = 0$. Astfel, dacă luăm
-* $r_1 = \min \{r \;\vert\; h(r) = 0\}$,
-* $r_2 = \max \{r \;\vert\; h(r) = 0\}$,
+Fie $h : \lbrace l, l + 1, \ldots, n \rbrace \to \mathbb{R}$, dată de $h = f - g$. Deoarece $g$ este descrescătoare, funcția $-g$ e crescătoare, ceea ce înseamnă că $h$ este crescătoare. Relația de mai sus revine la $h(r) = 0$. Astfel, dacă luăm
+* $r_1 = \min \lbrace r \;\vert\; h(r) = 0 \rbrace$,
+* $r_2 = \max \lbrace r \;\vert\; h(r) = 0 \rbrace$,
 
 numărul de perechi cu capătul stânga $l$ este egal cu $r_2 - r_1 + 1$.
 În consecință, numărul căutat este egal cu $\sum\limits_{l = 1}^{n} (r_2(l) - r_1(l) + 1)$.
