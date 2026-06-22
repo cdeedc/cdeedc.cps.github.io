@@ -50,6 +50,7 @@ Fie $h : {l, l + 1, \ldots, n} \to \mathbb{R}$, dată de $h = f - g$. Deoarece $
 
 numărul de perechi cu capătul stânga $l$ este egal cu $r_2 - r_1 + 1$.
 În consecință, numărul căutat este egal cu $\sum\limits_{l = 1}^{n} (r_2(l) - r_1(l) + 1)$.
+Numerele $r_1$ și $r_2$ vor fi aflate cu ajutorul unei căutări binare ($\mathcal{O}(\log n)$).
 
 ```cpp
 #include <iostream>
