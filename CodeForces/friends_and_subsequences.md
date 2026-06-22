@@ -10,7 +10,7 @@ tags: [Range Minimum Query]
 Fiind dați doi vectori $a$ și $b$ cu $n$ elemente fiecare, această problemă cere determinarea numărului de secvențe $[l, r]$ cu $1 \leqslant l \leqslant r \leqslant n$, pentru care are loc:
 $$ \max_{l \leqslant i \leqslant r} a_i = \min_{l \leqslant i \leqslant r} b_i $$
 
-Pentru a calcula eficient[^1] $\max_{l \leqslant i \leqslant r} a_i$ și $\min_{l \leqslant i \leqslant r} b_i$
+Pentru a calcula eficient $\max_{l \leqslant i \leqslant r} a_i$ și $\min_{l \leqslant i \leqslant r} b_i$, vom folosi metoda programării dinamice, și anume ==Range Minimum Query==.
 
 ```cpp
 #include <iostream>
@@ -155,5 +155,3 @@ int main()
     return 0;
 }
 ```
-
-[^1]: În timp constant $\mathcal{O}(1)$
