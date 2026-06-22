@@ -1,4 +1,4 @@
-remote_theme: cotes2020/jekyll-theme-chirpy
+remote_theme: canandrum/simple-documentation-jekyll-theme
 plugins:
   - jekyll-remote-theme
 title: 
