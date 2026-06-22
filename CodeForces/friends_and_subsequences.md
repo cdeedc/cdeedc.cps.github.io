@@ -19,7 +19,7 @@ Fie atunci:
 
 Pentru fiecare $1 \leqslant l \leqslant n$, vom număra câte valori $l \leqslant r \leqslant n$ există astfel încât să avem $\max\limits_{l \leqslant i \leqslant r} a_i = \min\limits_{l \leqslant i \leqslant r} b_i$ în $\mathcal{O}(\log n)$ cu ajutorul celor două tablouri bidimensionale menționate anterior.
 
-Fie deci $l \in \{1, 2, \ldots, n\}$ fixat.
+Considerăm $l \in \{1, 2, \ldots, n\}$ arbitrar fixat.
 
 Definim funcțiile $f, g : \{l, l + 1, \ldots, n\} \to \mathbb{R}$ prin
 * $f(r) = \max\limits_{l \leqslant i \leqslant r} a_i$ ,
