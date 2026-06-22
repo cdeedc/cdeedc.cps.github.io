@@ -27,6 +27,7 @@ Definim funcțiile $f, g : \{l, l + 1, \ldots, n\} \to \mathbb{R}$ prin
 
 unde $r \geqslant l$ reprezintă capătul dreapta al unei secvențe.
 
+{: .note }
 > *Observație.* Funcția $f$ este crescătoare, în timp ce $g$ este descrescătoare.
 
 *Demonstrație.* Într-adevăr, pentru orice $l \leqslant r < n$, avem:
