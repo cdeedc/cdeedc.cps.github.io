@@ -29,7 +29,7 @@ unde $r \geqslant l$ reprezintă capătul dreapta al unei secvențe.
 
 > *Observație.* Funcția $f$ este crescătoare, în timp ce $g$ este descrescătoare.
 
-*Demonstrație.* Avem ...
+*Demonstrație.* 
 
 ```cpp
 #include <iostream>
