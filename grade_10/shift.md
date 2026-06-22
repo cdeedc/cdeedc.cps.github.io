@@ -2,6 +2,7 @@
 title: Shift
 parent: Grade 10
 nav_order: 2
+tags: [implementation]
 ---
 ```cpp
 /**
