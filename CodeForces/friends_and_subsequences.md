@@ -148,7 +148,6 @@ void Solve()
     {
         int rLow = LowerBound(l),
             rHigh = UpperBound(l);
-        // printf("l = %d |  r1 = %d | r2 = %d\n", l, rLow, rHigh);
         if(rLow != -1 && rHigh != -1)
             cnt += (rHigh - rLow + 1);
     }

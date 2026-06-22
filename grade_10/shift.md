@@ -5,6 +5,8 @@ nav_order: 2
 tags: [Implementation]
 ---
 
+## [`Shift`](https://www.pbinfo.ro/probleme/38/shift) (#38)
+
 Subprogramul complet:
 ```cpp
 void shift(int *x, int n)
