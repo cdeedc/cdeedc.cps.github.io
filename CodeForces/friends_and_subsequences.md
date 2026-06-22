@@ -1,0 +1,152 @@
+---
+title: Shift
+parent: CodeForces
+nav_order: 2
+tags: [Range Minimum Query]
+---
+
+## [B. Friends and Subsequences](https://codeforces.com/edu/course/3/lesson/18/2/practice/contest/619577/problem/B)
+
+```cpp
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+inline int min(int x, int y) { return x < y ? x : y; }
+inline int max(int x, int y) { return x > y ? x : y; }
+
+const int MAX_N = 200000,
+          MAX_LOG = 18;
+
+int a[MAX_N + 1],
+    b[MAX_N + 1];
+int n;
+
+int maxRmq[MAX_LOG + 1][MAX_N + 1],
+    minRmq[MAX_LOG + 1][MAX_N + 1];
+int log2[MAX_N + 1];
+
+void Read()
+{
+    cin >> n;
+    for(int i = 1; i <= n; i++)
+        cin >> a[i];
+    for(int i = 1; i <= n; i++)
+        cin >> b[i];
+}
+
+void Precalc()
+{
+    log2[1] = 0;
+    for(int i = 2; i <= n; i++)
+        log2[i] = log2[i >> 1] + 1;
+}
+
+void Build()
+{
+    for(int i = 1; i <= n; i++)
+    {
+        maxRmq[0][i] = a[i];
+        minRmq[0][i] = b[i];
+    }
+    for(int p = 1; p <= log2[n]; p++)
+        for(int i = 1; i <= n; i++)
+        {
+            if(i + (1 << p) - 1 > n)
+            {
+                maxRmq[p][i] = maxRmq[p - 1][i];
+                minRmq[p][i] = minRmq[p - 1][i];
+                continue;
+            }
+            maxRmq[p][i] = max(maxRmq[p - 1][i], maxRmq[p - 1][i + (1 << (p - 1))]);
+            minRmq[p][i] = min(minRmq[p - 1][i], minRmq[p - 1][i + (1 << (p - 1))]);
+        }
+}
+
+int maxQuery(int l, int r)
+{
+    int len = log2[r - l + 1];
+    return max(maxRmq[len][l], maxRmq[len][r - (1 << len) + 1]);
+}
+
+int minQuery(int l, int r)
+{
+    int len = log2[r - l + 1];
+    return min(minRmq[len][l], minRmq[len][r - (1 << len) + 1]);
+}
+
+int LowerBound(int l)
+{
+    if(a[l] >= b[l])
+        return (a[l] == b[l]) ? l : -1;
+    int low = l, high = n, r = l;
+    while(low <= high)
+    {
+        int mid = low + ((high - low) >> 1);
+        if(maxQuery(l, mid) - minQuery(l, mid) < 0)
+        {
+            r = mid;
+            low = mid + 1;
+        }
+        else
+            high = mid - 1;
+    }
+    r++;
+    return (maxQuery(l, r) != minQuery(l, r)) ? -1 : r;
+}
+
+int UpperBound(int l)
+{
+    if(a[l] > b[l] || maxQuery(l, n) - minQuery(l, n) < 0)
+        return -1;
+    if(maxQuery(l, n) == minQuery(l, n))
+        return n;
+    int low = l, high = n, r = l;
+    while(low <= high)
+    {
+        int mid = low + ((high - low) >> 1);
+        if(maxQuery(l, mid) - minQuery(l, mid) > 0)
+        {
+            r = mid;
+            high = mid - 1;
+        }
+        else
+            low = mid + 1;
+    }
+    r--;
+    return (maxQuery(l, r) != minQuery(l, r)) ? -1 : r;
+}
+
+void Solve()
+{
+    long long cnt = 0;
+    for(int l = 1; l <= n; l++)
+    {
+        int rLow = LowerBound(l),
+            rHigh = UpperBound(l);
+        // printf("l = %d |  r1 = %d | r2 = %d\n", l, rLow, rHigh);
+        if(rLow != -1 && rHigh != -1)
+            cnt += (rHigh - rLow + 1);
+    }
+    cout << cnt << '\n';
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+        freopen("test.in", "r", stdin);
+        freopen("test.out", "w", stdout);
+    #endif // ONLINE_JUDGE
+
+    Read();
+    Precalc();
+    Build();
+    Solve();
+
+    return 0;
+}
+```

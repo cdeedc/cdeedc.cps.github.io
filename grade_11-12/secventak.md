@@ -2,7 +2,7 @@
 layout: default
 title: SecventaK
 parent: Grades 11-12
-tags: [Data Structures, Fenwick Tree, ad-hoc]
+tags: [Data Structures, Fenwick Tree, Ad-hoc]
 ---
 ## [`SecventaK`](https://www.pbinfo.ro/probleme/1447/secventak) (#1447)
 
