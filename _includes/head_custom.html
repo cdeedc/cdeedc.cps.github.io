@@ -7,3 +7,38 @@
   };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{% if page.tags %}
+<div id="jekyll-tags-data" data-tags="{{ page.tags | join: ',' }}" style="display: none;"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const titleElement = document.querySelector("main h1") || document.querySelector("h1");
+    const tagsDataDiv = document.getElementById("jekyll-tags-data");
+    
+    if (titleElement && tagsDataDiv) {
+      const tagsAttr = tagsDataDiv.getAttribute("data-tags");
+      if (tagsAttr) {
+        const tagsArray = tagsAttr.split(",");
+        const container = document.createElement("div");
+        container.style.marginTop = "10px";
+        container.style.marginBottom = "20px";
+        container.style.display = "flex";
+        container.style.gap = "6px";
+        container.style.flexWrap = "wrap";
+        
+        const colors = ["label-purple", "label-blue", "label-green", "label-yellow", "label-red"];
+        
+        tagsArray.forEach((tag, index) => {
+          const span = document.createElement("span");
+          const colorClass = colors[index % colors.length];
+          span.className = `label ${colorClass}`;
+          span.textContent = tag.trim();
+          container.appendChild(span);
+        });
+        
+        titleElement.parentNode.insertBefore(container, titleElement.nextSibling);
+      }
+    }
+  });
+</script>
+{% endif %}
