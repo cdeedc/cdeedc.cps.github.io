@@ -1,4 +1,6 @@
 remote_theme: cotes2020/jekyll-theme-chirpy
+plugins:
+  - jekyll-remote-theme
 title: 
 description: Solutions to Competitive Programming Problems
 
