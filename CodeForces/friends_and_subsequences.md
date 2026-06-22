@@ -31,6 +31,9 @@ unde $r \geqslant l$ reprezintă capătul dreapta al unei secvențe.
 
 *Demonstrație.* 
 
+{: .warning}
+Paragraph
+
 ```cpp
 #include <iostream>
 #include <fstream>
