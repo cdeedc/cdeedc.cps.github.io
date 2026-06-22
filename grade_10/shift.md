@@ -4,13 +4,24 @@ parent: Grade 10
 nav_order: 2
 tags: [implementation]
 ---
+
+Subprogramul complet:
 ```cpp
-/**
+void shift(int *x, int n)
+{
+    int aux = x[0];
+    for(int i = 0; i < n - 1; i++)
+        x[i] = x[i + 1];
+    x[n - 1] = aux;
+}
+```
+
+Pentru a verifica faptul că acest program funcționează corect, se poate crea o funcție de afișare a vectorului pentru a valida subprogramul `shift`.
+```cpp
 #include <iostream>
 
 using namespace std;
 
-*/
 void shift(int *x, int n)
 {
     int aux = x[0];
@@ -19,7 +30,6 @@ void shift(int *x, int n)
     x[n - 1] = aux;
 }
 
-/**
 void print(int *x, int n)
 {
     for(int i = 0; i < n; i++)
@@ -35,5 +45,4 @@ int main()
     print(x, n);
     return 0;
 }
-*/
 ```
