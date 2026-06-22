@@ -1,6 +1,4 @@
-remote_theme: canandrum/simple-documentation-jekyll-theme
-plugins:
-  - jekyll-remote-theme
+remote_theme: just-the-docs
 title: 
 description: Solutions to Competitive Programming Problems
 
