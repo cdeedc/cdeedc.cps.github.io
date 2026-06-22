@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Competitive Programming Solutions
 nav_order: 1
 ---
 
