@@ -1,11 +1,13 @@
 ---
-title: Shift
+title: Friends and Subsequences
 parent: CodeForces
 nav_order: 2
 tags: [Range Minimum Query]
 ---
 
 ## [B. Friends and Subsequences](https://codeforces.com/edu/course/3/lesson/18/2/practice/contest/619577/problem/B)
+
+
 
 ```cpp
 #include <iostream>
