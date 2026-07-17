@@ -9,15 +9,7 @@ Se cere să se determine diametrul unui arbore.
 
 *Soluție ($\mathcal{O}(n)$).* Vom folosi metoda programării dinamice. Fie arborele $G = (V, E)$, cu $n$ noduri. Pentru fiecare vârf $v \in V$, notăm cu $v.\pi$ părintele nodului $v$ (vom fixa rădăcina arborelui în nodul $1$).
 
-Notăm cu
-
-$$
-\texttt{toLeaf}(x) = \text{ lungimea maxim\u{a} a unui drum de la } x \text{ la o frunz\u{a} oarecare }
-$$
-și cu
-$$
-\texttt{maxLength}(x) = \text{ lungimea maxim\u{a} a unui drum al c\u{a}rui nod de nivel minim este } x
-$$
+Notăm cu $\texttt{toLeaf}(x) = $ lungimea maximă a unui drum de la $x$ la o frunză oarecare și cu $\texttt{maxLength}(x) = $ lungimea maximă a unui drum al cărui nod de nivel minim este $x$.
 
 Avem următoarele relații de recurență:
 
