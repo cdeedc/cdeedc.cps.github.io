@@ -1,6 +1,7 @@
 remote_theme: just-the-docs/just-the-docs
-title: 
+title: cps
 description: Solutions to Competitive Programming Problems
+color_scheme: dark
 
 aux_links:
   "Cismaru Eric-Dimitrie": "https://github.com/cdeedc"
