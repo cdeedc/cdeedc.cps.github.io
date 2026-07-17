@@ -20,15 +20,19 @@ $$
 $$
 
 Avem următoarele relații de recurență:
+
 $$
 \texttt{toLeaf}(x) = 1 + \max_{c.\pi = x} \texttt{toLeaf}(c),
 $$
+
 respectiv
+
 $$
 \texttt{maxLength}(x) = 2 + \max\limits_{a.\pi = b.\pi = x,\; a \neq b} (\texttt{toLeaf}(a) + \texttt{toLeaf}(b))
 $$
 
 Diametrul arborelui este atunci egal cu
+
 $$
 d = \max\limits_{1 \leqslant x \leqslant n} \texttt{maxLength}(x).
 $$
