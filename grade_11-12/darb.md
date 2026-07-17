@@ -4,12 +4,29 @@ title: Darb
 parent: Grades 11-12
 tags: [Graph Theory]
 ---
-## [`darb`](https://www.infoarena.ro/problema/darb)
+## [Diametrul unui arbore (`darb`)](https://www.infoarena.ro/problema/darb)
 Se cere să se determine diametrul unui arbore.
 
-*Soluție.* 
+*Soluție.* Fie arborele $G = (V, E)$. Pentru fiecare vârf $v \in V$, notăm cu $v.\pi$ părintele nodului $v$ (vom fixa rădăcina arborelui în nodul $1$).
 
-**Bibliografie:** [Competitive Programmer's Handbook, Antti Laaksonen](https://usaco.guide/CPH.pdf), pag. 146
+Notăm cu
+
+$$
+\texttt{toLeaf}(x) = \text{ lungimea maximă a unui drum de la } x \text{ la o frunză oarecare }
+$$
+și cu
+$$
+\texttt{maxLength}(x) = \text{ lungimea maximă a unui drum al cărui nod de nivel minim este } x
+$$
+
+Avem următoarele relații de recurență:
+$$
+\texttt{toLeaf}(x) = 1 + \max_{c.\pi = x} \texttt{toLeaf}(c),
+$$
+respectiv
+$$
+\texttt{maxLength}(x) = 2 + \max\limits_{a.\pi = b.\pi = x,\; a \neq b} (\texttt{toLeaf}(a) + \texttt{toLeaf}(b))
+$$
 
 ```cpp
 #include <fstream>
@@ -93,3 +110,5 @@ int main()
     return 0;
 }
 ```
+
+**Bibliografie:** [Competitive Programmer's Handbook, Antti Laaksonen](https://usaco.guide/CPH.pdf), pag. 146
