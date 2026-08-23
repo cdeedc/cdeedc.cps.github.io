@@ -65,6 +65,10 @@ $$ \mu'(c) = \mu(c) - x \iff \mu(c) = \mu'(c) + x. $$
 
 Dacă în graful $G$ cu funcția de cost $w'$ ar exista un ciclu $c$ cu cost negativ, $w'(c) = k\mu'(c) < 0 \iff \mu'(c) < 0$, am avea $\mu(c) < x$, i.e. există un ciclu $c$ de cost mai mic ca $x$.
 
+Pentru a testa dacă în graful orientat $G$ cu funcția de cost $w'$ are cicluri de cost negativ, folosim algoritmul Bellman-Ford de complexitate $O(NM)$. Totodată, pentru a determina valoarea $\mu$ minimă, aminitită la începutul soluției, vom folosi un algoritm de căutare binară.
+
+Complexitate temporală: $O(NM \log C)$, unde $C$ este costul maxim al unui ciclu din graf.
+
 *Codul sursă.*
 ```cpp
 #include <fstream>
