@@ -6,5 +6,3 @@ has_children: true
 ---
 
 # Problem with solutions - Grades 11-12
-
-* [SecventaK](secventak.html)

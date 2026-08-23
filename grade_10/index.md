@@ -6,5 +6,3 @@ has_children: true
 ---
 
 # Problem with solutions - Grade 10
-
-* [Shift](shift.html)

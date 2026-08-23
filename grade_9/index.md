@@ -6,5 +6,3 @@ has_children: true
 ---
 
 # Problem with solutions - Grade 9
-
-* [Numar](numar.html)
