@@ -41,11 +41,13 @@ Obținem graful din figura de mai jos:
     n3["$$3$$"]
     n4["$$4$$"]
 
-    n1-->|"$$1$$"|n2
-    n2-->|"$$1$$"|n3
-    n1-->|"$$1$$"|n3
-    n3-->|"$$2$$"|n4
-    n4-->|"$$3$$"|n1
+    n1 --- c12["$$1$$"] ---> n2
+    n2 --- c23["$$1$$"] ---> n3
+    n1 --- c13["$$1$$"] ---> n3
+    n3 --- c34["$$2$$"] ---> n4
+    n4 --- c41["$$3$$"] ---> n1
+
+    style c12,c23,c13,c34,c41 fill:#fff,stroke-width:0px
 ```
 Observăm că ciclul $c = (1, 2, 3, 4, 1)$ are $\mu(c) = \frac{7}{4} = 1.75$, iar ciclul $c' = (1, 3, 4)$ are $\mu(c') = \frac{6}{3} = 2$. Deoarece graful are numai două cicluri ($c$ și $c'$), răspunsul este $1.75$.
 
