@@ -36,16 +36,16 @@ Obținem graful din figura de mai jos:
 ```mermaid
     graph LR;
     
-    1["$$1$$"]
-    2["$$2$$"]
-    3["$$3$$"]
-    4["$$4$$"]
+    n1["$$1$$"]
+    n2["$$2$$"]
+    n3["$$3$$"]
+    n4["$$4$$"]
 
-    1-->|"$$1$$"|2
-    2-->|"$$1$$"|3
-    1-->|"$$1$$"|3
-    3-->|"$$2$$"|4
-    4-->|"$$3$$"|1
+    n1-->|"$$1$$"|n2
+    n2-->|"$$1$$"|n3
+    n1-->|"$$1$$"|n3
+    n3-->|"$$2$$"|n4
+    n4-->|"$$3$$"|n1
 ```
 Observăm că ciclul $c = (1, 2, 3, 4, 1)$ are $\mu(c) = \frac{7}{4} = 1.75$, iar ciclul $c' = (1, 3, 4)$ are $\mu(c') = \frac{6}{3} = 2$. Deoarece graful are numai două cicluri ($c$ și $c'$), răspunsul este $1.75$.
 
