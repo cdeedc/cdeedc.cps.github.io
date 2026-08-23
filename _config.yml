@@ -5,7 +5,7 @@ description: Solutions to Competitive Programming Problems
 color_scheme: light
 enable_copy_code_button: true
 mermaid:
-  version: "9.1.3"
+  version: "11.17.0"
 
 aux_links:
   "Cismaru Eric-Dimitrie": "https://github.com/cdeedc"
