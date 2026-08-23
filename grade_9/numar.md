@@ -27,7 +27,7 @@ $$
 
 De aici $2a = \frac{2n}{d} - d + 1 \iff a = \frac{1}{2}\left(\frac{2n}{d} - d + 1\right)$.
 
-Soluția problemei o reprezintă perechile de numere $(a, k)$, unde:
+Soluția problemei este alcătuită perechile de numere $(a, k)$, reprezentând o descompunere a lui $n$, unde:
 
 $$
 \begin{cases}
@@ -37,6 +37,26 @@ a &= \frac{1}{2}\left(\frac{2n}{d} - d + 1\right) \\
 , \; d \; \vert \; {2n}.
 $$
 
+> *Observație.* În secțiunea *Restricții și precizări* a problemei, este menționat faptul că descompunerile trebuie afișate în ordine descrescătoare a primului număr. De aceea, vom reține toate descompunerile într-un vector.
+
+Structura `Item` reține o descompunere a numărului dat: prima valoare (`firstVal` - echivalentul lui $a$ de mai sus) și numărul de elemente din descompunere (`count` - echivalentul lui $k$ de mai sus). Așadar, avem
+
+```cpp
+struct Item
+{
+    int firstVal;
+    int count;
+};
+```
+Deoarece dorim să sortăm vectorul pe care îl obținem, supraîncărcăm operatorul `<` din cadrul structurii `Item`:
+```cpp
+bool operator<(const Item& item) const
+{
+    return firstVal > item.firstVal;
+}
+```
+
+*Codul sursă.*
 ```cpp
 #include <fstream>
 #include <algorithm>
