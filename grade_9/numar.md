@@ -56,6 +56,14 @@ bool operator<(const Item& item) const
 }
 ```
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 *Codul sursă.*
 ```cpp
 #include <fstream>
