@@ -10,11 +10,11 @@ Se consideră un număr $n$. Să se determine toate modalitățile în care num�
 
 *Soluție.* Fie $n \in \mathbb{N}$. Presupunem că există o scriere a lui $n$ ca sumă a $k$ numere întregi consecutive, pornind de la $a$. Atunci
 $$
-\begin{equation*}
+\begin{align*}
 n &= a + (a + 1) + \ldots + (a + k - 1) \\
   &= ka + \frac{k(k - 1)}{2} \\
   &= \frac{k(2a + k - 1)}{2}
-\end{equation*}
+\end{align*}
 $$
 
 ```cpp

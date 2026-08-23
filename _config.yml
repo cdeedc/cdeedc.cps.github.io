@@ -2,6 +2,7 @@ remote_theme: just-the-docs/just-the-docs
 title:
 description: Solutions to Competitive Programming Problems
 color_scheme: light
+enable_copy_code_button: true
 
 aux_links:
   "Cismaru Eric-Dimitrie": "https://github.com/cdeedc"
