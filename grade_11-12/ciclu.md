@@ -49,7 +49,7 @@ Obținem graful din figura de mai jos:
 ```
 Observăm că ciclul $c = (1, 2, 3, 4, 1)$ are $\mu(c) = \frac{7}{4} = 1.75$, iar ciclul $c' = (1, 3, 4)$ are $\mu(c') = \frac{6}{3} = 2$. Deoarece graful are numai două cicluri ($c$ și $c'$), răspunsul este $1.75$.
 
-Să revenim acum la cazul general. Dorim să determinăm un ciclu de cost mediu minim, adică să aflăm o valoare $\mu$ minimă pentru care există un ciclu $c$ cu $0 < \mu(c) < \mu$. Cum $\mu$ este minimă cu această proprietate, pentru orice $\lambda < \mu$, avem $\mu(c) \geqslant \lambda$, pentru orice ciclu $c$, deci $\mu > \min\limits_{c = (v_0, v_1, \ldots, v_k)} \mu(c) \geqslant \lambda$ pentru $\lambda < \mu$. Trecând la limită după $\lambda$,
+Să revenim acum la cazul general. Dorim să determinăm un ciclu de cost mediu minim, adică să aflăm o valoare $\mu$ minimă pentru care există un ciclu $c$ cu $0 < \mu(c) \leqslant \mu$. Cum $\mu$ este minimă cu această proprietate, pentru orice $\lambda < \mu$, avem $\mu(c) > \lambda$, pentru orice ciclu $c$, deci $\mu \geqslant \min\limits_{c = (v_0, v_1, \ldots, v_k)} \mu(c) > \lambda$ pentru $\lambda < \mu$. Trecând la limită după $\lambda$,
 
 $$ \mu \geqslant \min_{c = (v_0, v_1, \ldots, v_k)} \mu(c) \geqslant \lim_{\lambda \nearrow \mu} \lambda = \mu, $$
 
