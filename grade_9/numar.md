@@ -8,13 +8,33 @@ tags: [Number Theory]
 
 Se consideră un număr $n$. Să se determine toate modalitățile în care numărul dat se poate scrie ca sumă de cel puțin două numere întregi consecutive.
 
-*Soluție.* Fie $n \in \mathbb{N}$. Presupunem că există o scriere a lui $n$ ca sumă a $k$ numere întregi consecutive, pornind de la $a$. Atunci
+*Soluție.* Fie $n \in \mathbb{N}$. Presupunem că există o scriere a lui $n$ ca sumă a $k$ numere întregi consecutive, pornind de la $a$. Atunci avem
 $$
 \begin{align*}
-n &= a + (a + 1) + \ldots + (a + k - 1) \\
-  &= ka + \frac{k(k - 1)}{2} \\
-  &= \frac{k(2a + k - 1)}{2}
+n &= a + (a + 1) + \ldots + (a + k - 1) = \sum_{i = 0}^{k - 1} (a + i) \\
+  &= ka + \frac{k(k - 1)}{2} = \frac{k(2a + k - 1)}{2}
 \end{align*}
+$$
+
+Relația de mai sus devine $2n = k(2a + k - 1)$. Atunci
+
+$$
+\begin{cases}
+k &= d \; \vert \; {2n} \\
+2a + k - 1 &= \frac{2n}{d}
+\end{cases}
+$$
+
+De aici $2a = \frac{2n}{d} - d + 1 \iff a = \frac{1}{2}\left(\frac{2n}{d} - d + 1\right)$.
+
+Soluția problemei o reprezintă perechile de numere $(a, k)$, unde:
+
+$$
+\begin{cases}
+k &= d \\
+a &= \frac{1}{2}\left(\frac{2n}{d} - d + 1\right) \\
+\end{cases}
+, \; d \; \vert \; {2n}.
 $$
 
 ```cpp
