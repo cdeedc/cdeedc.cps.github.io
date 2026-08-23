@@ -41,7 +41,7 @@ Obținem graful din figura de mai jos:
     n3["$$3$$"]
     n4["$$4$$"]
 
-    n1-->|"$$\contour{white}{1}$$"|n2
+    n1-->|"$$1$$"|n2
     n2-->|"$$1$$"|n3
     n1-->|"$$1$$"|n3
     n3-->|"$$2$$"|n4
