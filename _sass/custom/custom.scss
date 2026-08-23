@@ -1,5 +1,10 @@
-.highlight pre,
-pre.highlight,
-pre code {
-    line-height: 0.75;
+.highlight pre {
+    line-height: 1.0 !important;
+    margin: 0 !important;
+}
+
+.highlight pre code {
+    line-height: 1.0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
