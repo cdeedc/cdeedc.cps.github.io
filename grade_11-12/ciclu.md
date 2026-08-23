@@ -36,19 +36,18 @@ Obținem graful din figura de mai jos:
 ```mermaid
     graph LR;
     
-    n1["$$1$$"]
-    n2["$$2$$"]
-    n3["$$3$$"]
-    n4["$$4$$"]
+    n1(("$$1$$"))
+    n2(("$$2$$"))
+    n3(("$$3$$"))
+    n4(("$$4$$"))
 
-    n1 --- c12["$$1$$"] ---> n2
-    n2 --- c23["$$1$$"] ---> n3
-    n1 --- c13["$$1$$"] ---> n3
-    n3 --- c34["$$2$$"] ---> n4
-    n4 --- c41["$$3$$"] ---> n1
-
-    style c12,c23,c13,c34,c41 fill:#fff,stroke-width:0px
+    n1 --- c12["$$\textcolor{red}{1}$$"] ---> n2
+    n2 --- c23["$$\textcolor{red}{1}$$"] ---> n3
+    n1 --- c13["$$\textcolor{red}{1}$$"] ---> n3
+    n3 --- c34["$$\textcolor{red}{2}$$"] ---> n4
+    n4 --- c41["$$\textcolor{red}{3}$$"] ---> n1
 ```
+
 Observăm că ciclul $c = (1, 2, 3, 4, 1)$ are $\mu(c) = \frac{7}{4} = 1.75$, iar ciclul $c' = (1, 3, 4)$ are $\mu(c') = \frac{6}{3} = 2$. Deoarece graful are numai două cicluri ($c$ și $c'$), răspunsul este $1.75$.
 
 Să revenim acum la cazul general. Dorim să determinăm un ciclu de cost mediu minim, adică să aflăm o valoare $\mu$ minimă pentru care există un ciclu $c$ cu $0 < \mu(c) \leqslant \mu$. Cum $\mu$ este minimă cu această proprietate, pentru orice $\lambda < \mu$, avem $\mu(c) > \lambda$, pentru orice ciclu $c$, deci $\mu \geqslant \min\limits_{c = (v_0, v_1, \ldots, v_k)} \mu(c) > \lambda$ pentru $\lambda < \mu$. Trecând la limită după $\lambda$,
