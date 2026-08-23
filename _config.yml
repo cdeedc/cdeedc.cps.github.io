@@ -15,7 +15,7 @@ callouts:
     title: Notă.
     color: blue
   observation:
-    title: Observație.
+    title: "Observație."
     color: purple
   warning:
     title: Atenție.
