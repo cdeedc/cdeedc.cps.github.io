@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Numar
-parent: Grade 10
+parent: Grade 9
 tags: [Number Theory]
 ---
 ## [`Numar`](https://www.infoarena.ro/problema/numar)
