@@ -41,6 +41,19 @@ Obținem graful din figura de mai jos:
     3["$$3$$"]-->|"$$2$$"|4["$$4$$"]
     4["$$4$$"]-->|"$$3$$"|1["$$1$$"]
 ```
+Observăm că ciclul $c = (1, 2, 3, 4, 1)$ are $\mu(c) = \frac{7}{4} = 1.75$, iar ciclul $c' = (1, 3, 4)$ are $\mu(c') = \frac{6}{3} = 2$. Deoarece graful are numai două cicluri ($c$ și $c'$), răspunsul este $1.75$.
+
+Să revenim acum la cazul general. Dorim să determinăm un ciclu de cost mediu minim, adică să aflăm o valoare $\mu$ minimă pentru care există un ciclu $c$ cu $0 < \mu(c) \leqslant \mu$.
+
+Fie $x$ un număr real arbitrar. Considerând funcția de cost $w' : E \to \mathbb{R}$, $w' = w - x$, adică 
+
+$$w'(e) = w(e) - x, \forall e \in E,$$
+
+și adaptând notația pentru costul unui ciclu, găsim că
+
+$$ w'(c) = \sum_{i = 1}^{k} w'(v_{i - 1}, v_i) = \sum_{i = 1}^{k} w(v_{i - 1}, v_i) - kx = w(c) - kx,$$
+
+pentru orice ciclu $c = (v_0, v_1, \ldots, v_k)$, $v_0 = v_k$.
 
 *Codul sursă.*
 ```cpp
