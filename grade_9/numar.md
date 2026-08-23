@@ -57,7 +57,7 @@ bool operator<(const Item& item) const
 }
 ```
 
-{: .observation }
+{: .note }
 A paragraph
 
 *Codul sursă.*

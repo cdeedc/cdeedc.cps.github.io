@@ -20,7 +20,7 @@ callouts:
     title: New
     color: green
   note:
-    title: Note
+    title: Observație
     color: purple
   warning:
     title: Warning
