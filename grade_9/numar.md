@@ -57,6 +57,9 @@ bool operator<(const Item& item) const
 }
 ```
 
+{: .note }
+A paragraph
+
 *Codul sursă.*
 ```cpp
 #include <fstream>
