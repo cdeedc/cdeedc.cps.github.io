@@ -8,12 +8,14 @@ tags: [Graph Theory]
 
 Se dă un graf orientat ponderat $G = (V, E)$ cu $n$ noduri și $m$ arce, cu funcția de cost $w : E \to \mathbb{R}$, pentru care avem $$w(e) > 0, \forall e \in E.$$
 
-Pentru un ciclu $c = (v_0, v_1, \ldots, v_k)$, $v_0 = v_k$, definim costul acestuia prin 
+Pentru un ciclu $c = (v_0, v_1, \ldots, v_k)$, $v_0 = v_k$, definim costul acestuia prin
+
 $$w(c) = \sum_{i = 1}^{k} w(v_{i - 1}, v_i),$$
-precum și costul său mediu ca fiind egal cu $\frac{w(c)}{k}$.
+precum și costul său mediu ca fiind egal cu $\mu(c) = \frac{w(c)}{k}$.
 
 Se cere să se determine costul mediu minim al vreunui ciclu, adică valoarea:
-$$\min_{c = (v_0, v_1, \ldots, v_k)} \frac{w(c)}{k} .$$
+
+$$\min_{c = (v_0, v_1, \ldots, v_k)} \mu(c) = \min_{c = (v_0, v_1, \ldots, v_k)} \frac{w(c)}{k} .$$
 
 *Soluție.*
 
