@@ -11,17 +11,12 @@ aux_links:
   "Cismaru Eric-Dimitrie": "https://github.com/cdeedc"
 
 callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: green
   note:
-    title: Observație
+    title: Notă.
+    color: blue
+  observation:
+    title: Observație.
     color: purple
   warning:
-    title: Warning
+    title: Atenție.
     color: red

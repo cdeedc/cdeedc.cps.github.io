@@ -38,7 +38,8 @@ a &= \frac{1}{2}\left(\frac{2n}{d} - d + 1\right) \\
 , \; d \; \vert \; {2n}.
 $$
 
-> *Observație.* În secțiunea *Restricții și precizări* a problemei, este menționat faptul că descompunerile trebuie afișate în ordine descrescătoare a primului număr. De aceea, vom reține toate descompunerile într-un vector pe care îl vom sorta ulterior.
+{ .observation }
+*Observație.* În secțiunea *Restricții și precizări* a problemei, este menționat faptul că descompunerile trebuie afișate în ordine descrescătoare a primului număr. De aceea, vom reține toate descompunerile într-un vector pe care îl vom sorta ulterior.
 
 Structura `Item` reține o descompunere a numărului dat: prima valoare (`firstVal` - echivalentul lui $a$ de mai sus) și numărul de elemente din descompunere (`count` - echivalentul lui $k$ de mai sus). Așadar, avem
 
@@ -56,9 +57,6 @@ bool operator<(const Item& item) const
     return firstVal > item.firstVal;
 }
 ```
-
-{: .note }
-A paragraph
 
 *Codul sursă.*
 ```cpp
